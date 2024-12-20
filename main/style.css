@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    background-color: #251E25 ;
+    height: 100vh;
+}
+.img-logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+}
+ul li{
+    display: inline-block;
+    margin: 20px;
+}
+ul li a {
+    text-decoration: none;
+    font-size: 19px;
+    color: white;
+}
+.barr{
+    font-size: 25px;
+    display: none;
+    text-decoration: none;
+    color: white;
+}
+ul li a:hover{
+    background-color: black;
+}
+section{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 437px;
+}
+.text{
+    text-align: center;
+    width: 18%;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text h1{
+    font-size: 35px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: white;
+}
+.text p {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+}
+.img-1{
+    width: 30%;
+}
+.icons{
+    position: absolute;
+    bottom: 20%;
+    left: 35%;
+}
+.icons img{
+    width: 100px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.icons img:hover{
+    transform: scale(1.2);
+}
+/* إخفاء القائمة بشكل افتراضي */
+#pop {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* عند الضغط على الأيقونة، نعرض القائمة */
+#pop.show {
+    display: block;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* تنسيق الأيقونة (bars) */
+.barr {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ترتيب العناصر داخل الناف بار */
+#navv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navv ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#navv ul li {
+    margin-right: 20px;
+}
+
+#navv ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* النمط للموبايلات */
+@media (max-width: 768px) {
+    /* عند الضغط على الأيقونة، نعرض القائمة */
+    #navv ul {
+        flex-direction: column;
+        display: none; /* إخفاء القائمة في البداية */
+    }
+
+    /* عند تفعيل الأيقونة، تظهر القائمة */
+    #navv ul.show {
+        display: block;
+    }
+
+    /* ظهور الأيقونة عند الضغط */
+    .bar-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        height: 110vh;
+    }
+    .barr {
+        display: block;
+        text-decoration: none;
+    }
+    ul li {
+        display: none;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+        align-items: center;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 25px;
+    }
+    .img-1 img {
+        width: 100%;
+    }
+    .img-1 {
+        width: 90%;
+    }
+    .text {
+        margin-top: 35px;
+        text-align: center;
+        width: 50%;
+    }
+    .icons {
+        position: relative;
+        bottom: 2%;
+        left: 0%;
+    }
+    .icons img {
+        margin: 10px;
+    }
+}
